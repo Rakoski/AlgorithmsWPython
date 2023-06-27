@@ -5,10 +5,9 @@ def selectionsort(lista):
         for j in range(i + 1, tamanho_lista):
             if lista[j] < lista[index_min]:
                 index_min = j
-        if index_min != i:
-            temp = lista[i]
-            lista[i] = lista[i + 1]
-            lista[i + 1] = lista[i]
+        temp = lista[i]
+        lista[i] = lista[index_min]
+        lista[index_min] = temp
     return lista
 
 
